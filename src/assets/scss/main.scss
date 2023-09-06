@@ -1,0 +1,767 @@
+@import './base';
+@import './noscroll';
+@import './variables';
+@import './mixins';
+@import './breakpoints';
+#root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: $main_fon;
+}
+.container {
+  width: 1366px;
+  // height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+  // border: 1px solid red;
+  @include media('<=desktop') {
+    width: 100%;
+  }
+}
+.patient {
+  height: 100vh;
+  // padding: 10px;
+  overflow: hidden;
+}
+.border_red {
+  border: 1px solid red;
+}
+.color_red {
+  color: $logo_red;
+  font-weight: 600;
+}
+.color_green {
+  color: $submit;
+  font-weight: 600;
+}
+.content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $content;
+  border-radius: 15px;
+  hr {
+    border: 1px solid $hr;
+  }
+}
+.content2 {
+  background-color: $content;
+  border-radius: 15px;
+  hr {
+    border: 1px solid $hr;
+  }
+}
+a {
+  user-select: none;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+  background-color: $kok;
+  border-radius: 50%;
+  &:hover {
+    background-color: $kokhover;
+  }
+  &:active {
+    background-color: $kokactive;
+  }
+  img {
+    width: 30px;
+    height: 35px;
+    // width: 25px;
+    // height: 30px;
+  }
+}
+.iconresponse {
+  height: 30px !important;
+  width: 40px !important;
+}
+.room_icon {
+  width: 35px !important;
+  height: 35px !important;
+}
+.hr_dashed {
+  flex: auto 1 1;
+  border: none !important;
+  border-bottom: 1px dashed $text_black !important;
+}
+.btn_history {
+  display: flex;
+  cursor: pointer;
+  padding: 0px 10px 0 10px;
+  background-color: $history;
+  height: 35px;
+  align-items: center;
+  color: $oq;
+  border-radius: 4px;
+  justify-content: center;
+  user-select: none;
+  &:hover {
+    background-color: $history_hover;
+  }
+  &:active {
+    background-color: $history_active;
+  }
+}
+.btn_cencel {
+  display: flex;
+  cursor: pointer;
+  padding: 0px 10px 0 10px;
+  background-color: $logo_red;
+  height: 35px;
+  align-items: center;
+  color: $oq;
+  border-radius: 4px;
+  justify-content: center;
+  user-select: none;
+  &:hover {
+    background-color: $logo_red_hover;
+  }
+  &:active {
+    background-color: $logo_red_active;
+  }
+}
+.submit2 {
+  padding: 5px;
+  background-color: $submit;
+  color: $oq;
+  border-radius: 4px;
+  text-align: center;
+  user-select: none;
+  &:hover {
+    background-color: $submit_hover;
+  }
+  &:active {
+    background-color: $submit_active;
+  }
+}
+.edit2 {
+  padding: 5px;
+  background-color: $edit;
+  color: $text_black;
+  border-radius: 4px;
+  text-align: center;
+  user-select: none;
+  &:hover {
+    background-color: $edithover;
+  }
+  &:active {
+    background-color: $edit;
+  }
+}
+.cencel2 {
+  padding: 5px;
+  background-color: $logo_red;
+  color: $oq;
+  border-radius: 4px;
+  text-align: center;
+  user-select: none;
+  &:hover {
+    background-color: $logo_red_hover;
+  }
+  &:active {
+    background-color: $logo_red_active;
+  }
+}
+.btn_submit {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px 0 10px;
+  background-color: $submit;
+  color: $oq;
+  border-radius: 4px;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $submit_hover;
+  }
+  &:active {
+    background-color: $submit_active;
+  }
+}
+.link_btn {
+  cursor: pointer;
+  padding: 10px;
+  background-color: $kok;
+  white-space: nowrap;
+  color: $oq;
+  border-radius: 4px;
+  user-select: none;
+  &:hover {
+    background-color: $kokhover;
+  }
+  &:active {
+    background-color: $kokactive;
+  }
+}
+.kok_btn {
+  position: relative;
+  cursor: pointer;
+  // padding: 0px 10px 0 10px;
+  background-color: $kok;
+  // height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $oq;
+  border-radius: 4px;
+  user-select: none;
+  &:hover {
+    background-color: $kokhover;
+  }
+  &:active {
+    background-color: $kokactive;
+  }
+}
+.edit_btn {
+  cursor: pointer;
+  padding: 0px 10px 0 10px;
+  background-color: $edit;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text_black;
+  border-radius: 4px;
+  user-select: none;
+  &:hover {
+    background-color: $edithover;
+  }
+  &:active {
+    background-color: $edit;
+  }
+}
+.bed {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 35px;
+  height: 35px;
+  background-color: $kok;
+  &:hover {
+    background-color: $kokhover;
+  }
+  &:active {
+    background-color: $kokactive;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+.bed_leave {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 35px;
+  height: 35px;
+  background-color: $logo_red;
+  &:hover {
+    background-color: $logo_red_hover;
+  }
+  &:active {
+    background-color: $logo_red_active;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+.edit {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  user-select: none;
+  &:hover {
+    background-color: $edithover;
+  }
+  &:active {
+    background-color: $edit;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+.delete_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    border-radius: 4px;
+    user-select: none;
+    padding: 5px;
+    &:hover {
+      background-color: $edithover;
+    }
+    &:active {
+      background-color: $logo_red;
+      img {
+        filter: grayscale(100%) invert(100%) brightness(200%);
+      }
+    }
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+.logo {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+}
+.search2 {
+  appearance: none;
+  // border: 1px solid gray;
+  // width: 100%;
+  padding: 15px;
+  padding-left: 45px;
+  background-image: url('../icons/search.svg');
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: center;
+  border-radius: 20px;
+  outline: none;
+  font-size: 20px;
+}
+.search {
+  appearance: none;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  padding-left: 45px;
+  background-image: url('../icons/search.svg');
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: center;
+  border-radius: 20px;
+  outline: none;
+  font-size: 20px;
+}
+.d_flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.fd_column {
+  display: flex;
+  flex-direction: column;
+}
+.justify_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.justify_around {
+  border: 1px solid red;
+  display: flex;
+  // align-items: center;
+  gap: 25px;
+  justify-content: space-evenly;
+}
+.justify_start {
+  display: flex;
+  justify-content: flex-start;
+}
+.justify_end {
+  display: flex;
+  justify-content: flex-end;
+}
+.align_start {
+  display: flex;
+  align-items: flex-start;
+}
+.align_end {
+  display: flex;
+  align-items: flex-end;
+}
+.align_center {
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+.justify_center {
+  display: flex;
+  justify-content: center;
+}
+.flex_auto {
+  display: flex;
+  flex: 1 1 auto;
+}
+.gap10 {
+  gap: 10px;
+}
+.gap20 {
+  gap: 20px !important;
+}
+.gap40 {
+  gap: 40px;
+}
+
+.pad10 {
+  padding: 10px;
+}
+.pad20 {
+  padding: 20px;
+}
+.gridTemCol2 {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  gap: 20px;
+  // align-items: center;
+}
+
+.gridTemCol3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  gap: 5%;
+  align-items: center;
+}
+.gridTemCol4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+  gap: 10px;
+  // align-items: center;
+}
+.gridTemCol4_patient_more {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  // grid-auto-rows: minmax(50px, auto);
+  padding: 10px;
+  gap: 5%;
+  align-items: center;
+}
+.gridTemCol5 {
+  display: grid;
+  grid-template-columns: repeat(5, 30% 20% 10% 20% 15%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.gridTemCol6_Rooms {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(6, 5% 24% 20% 10% 20% 15%);
+  padding: 20px;
+  gap: 1%;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgb(97, 171, 240);
+}
+.display_none {
+  display: none;
+}
+.gridTemCol6_rooms_bemor {
+  display: grid;
+  grid-template-columns: repeat(6, 5% 24% 20% 10% 20% 15%);
+  padding: 20px;
+  gap: 1%;
+  align-items: center;
+}
+.gridTemColAdmin {
+  display: grid;
+  grid-template-columns: repeat(6, 5% 20% 20% 20% 15% 15%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.gridTemCol8 {
+  display: grid;
+  grid-template-columns: repeat(8, 3% 20% 12% 18% 10% 10% 10% 10%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.gridTemCol9 {
+  display: grid;
+  grid-template-columns: repeat(9, 3% 19% 10% 18% 9% 9% 8% 8% 8%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.roomInfoGridTemCol8 {
+  display: grid;
+  grid-template-columns: repeat(8, 3% 21% 10% 20% 7% 15% 8% 8%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.freerooms {
+  display: grid;
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+  grid-template-columns: repeat(7, 6% 15% 15% 15% 15% 14% 14%);
+}
+.grid_conclutions {
+  display: grid;
+  grid-template-columns: repeat(3, 40% 30% 24%);
+  align-items: center;
+  gap: 3%;
+}
+.grid_kassa {
+  display: grid;
+  grid-template-columns: repeat(8, 3% 20% 10% 20% 10% 10% 10% 10%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.grid_kassa2 {
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 45% 5% 45%);
+  gap: 5%;
+  align-items: center;
+  text-align: center;
+}
+.grid_kassa_delete_tolov {
+  display: grid;
+  grid-template-columns: repeat(5, 20% 20% 20% 26% 10%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.grid_lab {
+  display: grid;
+  grid-template-columns: repeat(6, 3% 24% 14% 24% 15% 15%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.grid_lab6 {
+  display: grid;
+  grid-template-columns: repeat(6, 3% 25% 13% 24% 15% 15% 2%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.grid_lab5 {
+  display: grid;
+  grid-template-columns: repeat(5, 3% 23% 23% 24% 23%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.gridUltrasound {
+  display: grid;
+  grid-template-columns: repeat(8, 3% 19% 11% 19% 14% 14% 14%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.grid_doctor {
+  display: grid;
+  grid-template-columns: repeat(7, 3% 23% 12% 24% 11% 11% 10%);
+  padding: 10px;
+  gap: 1%;
+  align-items: center;
+}
+.patient_more {
+  display: grid;
+  grid-template-columns: repeat(2, 40% 58%);
+  gap: 2%;
+  // overflow: hidden;
+}
+.patient_history {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(2, 35% 63%);
+  gap: 2%;
+}
+.directions_and_conclusions {
+  overflow: scroll;
+  padding: 20px;
+}
+.view_conclusion {
+  padding: 20px;
+  overflow: scroll;
+  & > * {
+    width: 100%;
+  }
+}
+.vertikal {
+  height: 100%;
+  width: 0;
+  border: 2px solid $hr;
+}
+.text_center {
+  text-align: center;
+}
+.text_justify {
+  text-align: justify;
+}
+
+.madal {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  // display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 11;
+  .madalContent {
+    border: 2px solid $kok;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // min-width: 1000px;
+    border-radius: 10px;
+    padding: 20px;
+    height: 95vh;
+    overflow: scroll;
+    hr {
+      border: 2px solid $hr;
+    }
+  }
+}
+.input,
+input {
+  border: 1px solid $hr;
+  padding: 10px;
+  border-radius: 4px;
+  &:focus {
+    border: 1px solid $kok;
+    outline: none;
+  }
+}
+
+.label {
+  display: flex;
+  text-align: justify;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  line-height: 1.6;
+}
+.checkbox {
+  width: 20px !important;
+  height: 20px !important;
+  border: 1px solid $kok;
+}
+
+.kok_btn:hover .dropdown {
+  display: block;
+}
+.dropdown {
+  position: absolute;
+  display: none;
+  width: 110%;
+  background-color: $oq;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+select {
+  padding: 10px 00px 10px 00px;
+  font-size: 15px;
+}
+.drop_content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px 10px 10px 10px;
+  color: $text_black;
+  &:hover {
+    background-color: $kokhover;
+    color: $oq;
+  }
+}
+.select {
+  border: 1px solid $hr;
+  background-color: $content;
+  color: $text_black;
+  &:hover {
+    background-color: $content;
+  }
+  &:focus {
+    background-color: $content;
+  }
+}
+.router-link-active {
+  .icon {
+    border: 4px solid white;
+  }
+}
+.link {
+  border: 3px solid white;
+}
+.link2 {
+  border: 3px solid green;
+}
+.xulosa {
+  width: 70%;
+}
+.xulosa_reg {
+  width: 70%;
+  position: relative;
+  .xulosa_reg_content {
+    background-color: $oq;
+    padding: 5px;
+    border-radius: 3px;
+    position: sticky;
+    top: 0px;
+    z-index: 9;
+  }
+}
+
+////btn_pointerni o'chirib yuborsa ham bo'laveradi
+.btn_pointer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px;
+  border-radius: 8px;
+  &:hover {
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    background-color: transparent;
+  }
+}
+// .router-link-active {
+// }

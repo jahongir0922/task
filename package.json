@@ -1,0 +1,35 @@
+{
+  "name": "revmatologiya",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-vue": "^5.1.0",
+    "axios": "^1.4.0",
+    "ckeditor5-build-full": "^25.0.0",
+    "pinia": "^2.0.35",
+    "sweetalert2": "^11.7.12",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vitejs/plugin-vue": "^4.2.1",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "@vue/test-utils": "^2.2.7",
+    "eslint": "^8.39.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "jsdom": "^22.0.0",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "vite": "^4.3.4",
+    "vitest": "^0.31.0"
+  }
+}

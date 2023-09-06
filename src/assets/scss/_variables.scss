@@ -1,0 +1,41 @@
+// Ranglar:
+
+$text_black: #202244;
+$oq: #e0e8f5;
+$main_fon: #c4def9;
+$content: #ffffff;
+$hr: #e7e7e7;
+
+// btn colors
+$kok: #2c3192;
+$kokhover: rgba(
+  $color: $kok,
+  $alpha: 0.8
+);
+$kokactive: #2f3f9f;
+
+$logo_red: #ea1f25;
+$logo_red_hover: rgba(
+  $color: $logo_red,
+  $alpha: 0.8
+);
+$logo_red_active: $logo_red;
+
+$submit: green;
+$submit_hover: rgba(
+  $color: $submit,
+  $alpha: 0.8
+);
+$submit_active: $submit;
+
+$edit: rgb(243, 243, 34);
+$edithover: yellow;
+
+
+$history: rgb(120, 120, 120);
+$history_hover: rgba(
+  $color: $history,
+  $alpha: 0.8
+);
+$history_active: $history;
+// Pikselli qiymatlar:
